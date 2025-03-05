@@ -3,15 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS homework-9</title>
+    <title>JS homework-11</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
-      <ul>
-        <li><a href="./1-gallery.html">Gallery</a></li>
-        <li><a href="./2-form.html">Form</a></li>
-      </ul>
+      <form class="form">
+        <label>
+          <input
+            class="request"
+            type="text"
+            name="request"
+            placeholder="Search images..."
+          />
+        </label>
+        <button class="btn-submit" type="submit">Search</button>
+      </form>
+      <div class="loader-wrapper"><span class="loader">Loading</span></div>
+      <ul class="gallery"></ul>
+      <script type="module" src="./main.js"></script>
     </main>
   </body>
 </html>
