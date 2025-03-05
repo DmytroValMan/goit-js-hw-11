@@ -3,7 +3,7 @@ import * as pixabay from './js/pixabay-api';
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.request');
-const loader = document.querySelector('.loader-wrapper');
+const loader = document.querySelector('.loader');
 
 form.addEventListener('submit', event => {
   event.preventDefault();
@@ -13,7 +13,7 @@ form.addEventListener('submit', event => {
       'Search field must not be empty. Please, fill it!'
     );
   }
-  loader.style.display = 'flex';
+  loader.style.display = 'inline-block';
 
   pixabay.requestPixabay(inputText).finally(() => {
     loader.style.display = 'none';
