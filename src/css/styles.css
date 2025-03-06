@@ -144,6 +144,8 @@ button:focus {
   letter-spacing: 2px;
   position: relative;
   box-sizing: border-box;
+  width: 100%;
+  text-align: center;
 }
 
 .loader::after {

@@ -13,7 +13,7 @@ form.addEventListener('submit', event => {
       'Search field must not be empty. Please, fill it!'
     );
   }
-  loader.style.display = 'inline-block';
+  loader.style.display = 'block';
 
   pixabay.requestPixabay(inputText).finally(() => {
     loader.style.display = 'none';
