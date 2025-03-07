@@ -1,12 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
+import { addErrorMessage } from '../main';
 
-import icon from '../img/bi_x-octagon.svg';
-
-const galleryList = document.querySelector('.gallery');
+export const galleryList = document.querySelector('.gallery');
 
 export const newGallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -34,17 +31,4 @@ export const addGallery = imgObject => {
     galleryList.innerHTML = imagesGallary;
     newGallery.refresh();
   }
-};
-
-export const addErrorMessage = message => {
-  iziToast.show({
-    message: message,
-    messageColor: '#fafafb',
-    messageSize: '16px',
-    messageLineHeight: '1.5',
-    backgroundColor: '#ef4040',
-    theme: 'dark',
-    iconUrl: icon,
-    position: 'topRight',
-  });
 };
