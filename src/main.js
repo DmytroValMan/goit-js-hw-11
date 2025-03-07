@@ -18,7 +18,7 @@ form.addEventListener('submit', event => {
     input.value = '';
     return addErrorMessage('Search field must not be empty. Please, fill it!');
   }
-  loader.style.display = 'block';
+  loader.style.display = 'inline-block';
 
   pixabay.requestPixabay(inputText).finally(() => {
     loader.style.display = 'none';
