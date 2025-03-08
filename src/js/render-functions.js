@@ -1,7 +1,10 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { addErrorMessage } from '../main';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
+import icon from '../img/bi_x-octagon.svg';
 
 export const galleryList = document.querySelector('.gallery');
 
@@ -28,7 +31,20 @@ export const addGallery = imgObject => {
         </li>`
       )
       .join('');
-    galleryList.innerHTML = imagesGallary;
+    galleryList.insertAdjacentHTML('beforeend', imagesGallary);
     newGallery.refresh();
   }
+};
+
+export const addErrorMessage = message => {
+  iziToast.show({
+    message: message,
+    messageColor: '#fafafb',
+    messageSize: '16px',
+    messageLineHeight: '1.5',
+    backgroundColor: '#ef4040',
+    theme: 'dark',
+    iconUrl: icon,
+    position: 'topRight',
+  });
 };

@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-import { addGallery } from './render-functions';
-import { addErrorMessage } from '../main';
+import { addErrorMessage, addGallery } from './render-functions';
 
 export const requestPixabay = searchText => {
   return axios
