@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-import { addErrorMessage, addGallery } from './render-functions';
-
 export const requestPixabay = searchText => {
   return axios
     .get('https://pixabay.com/api/', {
@@ -13,8 +11,5 @@ export const requestPixabay = searchText => {
         safesearch: 'true',
       },
     })
-    .then(response => {
-      addGallery(response.data.hits);
-    })
-    .catch(error => addErrorMessage(error.message));
+    .then(({ data }) => data);
 };
